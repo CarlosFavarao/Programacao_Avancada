@@ -14,7 +14,7 @@ public class Main {
 
         switch (op){
             case 1:
-                type = "email";
+                type = "email";//a variável type recebe a string do que deverá ser criado na Factory
                 break;
 
             case 2:
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Digite a mensagem: ");
         String message = scanner.nextLine();
 
-        Notification notification = NotificationFactory.createNotification(type);
-        notification.send(message);
+        Notification notification = NotificationFactory.createNotification(type);//aqui redirecionados a criação de instâncias para a Factory
+        notification.send(message);//utilizando os métodos normalmente com os nomes padrão, alem de funcional economiza codigo
     }
 }
